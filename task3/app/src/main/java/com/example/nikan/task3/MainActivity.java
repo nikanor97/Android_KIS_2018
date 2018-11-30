@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn_people_list = (Button)findViewById(R.id.button_people_list);
-        btn_people_list.setOnClickListener(new View.OnClickListener() {
+        Button btnPeopleList = (Button)findViewById(R.id.button_people_list);
+        btnPeopleList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 OpenPeopleList();
