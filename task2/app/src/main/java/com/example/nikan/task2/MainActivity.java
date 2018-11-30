@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_send_email = (Button)findViewById(R.id.button_send_email);
-        btn_send_email.setOnClickListener(new View.OnClickListener() {
+        Button btnSendEmail = (Button)findViewById(R.id.button_send_email);
+        btnSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SendEmailActivity();
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn_open_profile = (Button)findViewById(R.id.button_open_profile);
-        btn_open_profile.setOnClickListener(new View.OnClickListener() {
+        Button btnOpenProfile = (Button)findViewById(R.id.button_open_profile);
+        btnOpenProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Open profile button pressed", Toast.LENGTH_LONG).show();
