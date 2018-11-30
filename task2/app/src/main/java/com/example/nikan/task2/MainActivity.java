@@ -14,26 +14,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_send_email = (Button)findViewById(R.id.button_send_email);
-        btn_send_email.setOnClickListener(new View.OnClickListener() {
+        Button btnSendEmail = (Button)findViewById(R.id.button_send_email);
+        btnSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendEmailActivity();
+                sendEmailActivity();
                 //Toast.makeText(MainActivity.this, "Send email button pressed", Toast.LENGTH_LONG).show();
             }
         });
 
-        Button btn_open_profile = (Button)findViewById(R.id.button_open_profile);
-        btn_open_profile.setOnClickListener(new View.OnClickListener() {
+        Button btnOpenProfile = (Button)findViewById(R.id.button_open_profile);
+        btnOpenProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Open profile button pressed", Toast.LENGTH_LONG).show();
-                OpenProfileActivity();
+                openProfileActivity();
             }
         });
     }
 
-    public void SendEmailActivity(){
+    public void sendEmailActivity(){
         /* Create the Intent */
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         /* Fill it with Data */
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(emailIntent);
     }
 
-    public void OpenProfileActivity(){
+    public void openProfileActivity(){
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
