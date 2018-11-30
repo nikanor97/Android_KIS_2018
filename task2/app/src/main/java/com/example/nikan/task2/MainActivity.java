@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         btnSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendEmailActivity();
+                sendEmailActivity();
                 //Toast.makeText(MainActivity.this, "Send email button pressed", Toast.LENGTH_LONG).show();
             }
         });
@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Open profile button pressed", Toast.LENGTH_LONG).show();
-                OpenProfileActivity();
+                openProfileActivity();
             }
         });
     }
 
-    public void SendEmailActivity(){
+    public void sendEmailActivity(){
         /* Create the Intent */
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         /* Fill it with Data */
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(emailIntent);
     }
 
-    public void OpenProfileActivity(){
+    public void openProfileActivity(){
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
