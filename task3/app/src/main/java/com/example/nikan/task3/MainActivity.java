@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         btnSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendEmailActivity();
+                sendEmailActivity();
                 //Toast.makeText(MainActivity.this, "Send email button pressed", Toast.LENGTH_LONG).show();
             }
         });
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         btnPeopleList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OpenPeopleList();
+                openPeopleList();
             }
         });
     }
 
-    public void SendEmailActivity(){
+    public void sendEmailActivity(){
         /* Create the Intent */ 
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         /* Fill it with Data */
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(emailIntent);
     }
 
-    public void OpenPeopleList(){
+    public void openPeopleList(){
         Intent intent = new Intent(this, RecyclerViewActivity.class);
         startActivity(intent);
     }
