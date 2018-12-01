@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void SendEmailActivity(){
-        /* Create the Intent */
+        /* Create the Intent */ 
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         /* Fill it with Data */
         emailIntent.setType("plain/text");
